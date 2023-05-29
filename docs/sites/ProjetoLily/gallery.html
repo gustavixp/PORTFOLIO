@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/52e9ba2d77.js" crossorigin="anonymous"></script>
+  <link rel="shortcut icon" href="images/logo-lily.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <title>Lily: Explorando o potencial da IA para criar 1000 imagens consistentes com text-to-image</title>
+</head>
+
+<body>
+
+  <script type="text/template" id="item-template">
+    <% _.each(images, function(obj) { %>
+      <li>
+        <img style="min-height: 250px; max-height: 520px; width: 100%; object-fit: contain;" class="lightbox-image" src="<%= obj.src %>" loading="lazy" alt="">
+        <!-- <img style="height: clamp(250px, 100%, 520px)" class="lightbox-image" src="<%= obj.src %>" loading="lazy" alt=""> -->
+      </li>
+    <% }); %>
+  </script>
+
+  <div class="wrapper">
+    <div class="content">
+
+      <header class="header-gallery">
+        <div class="header__wrapper-gallery">
+          <img class="logo__gallery" src="images/logo-lily.png" alt="" loading="lazy">
+          <h2>Galeria</h2>
+          <a class="home" href="index.html"><i class="arrow-gallery fa-solid fa-angle-left"></i>Voltar</a>
+        </div>
+      </header>
+
+      <section class="gallery">
+        <div class="gallery__wrapper">
+          <ul class="grid" id="grid-lily"></ul>
+          <!--<a href="#" class="top">Voltar ao Topo</a>-->
+        </div>
+      </section>
+
+      <div id="lightbox">
+        <div class="img-lbox__wrapper">
+          <button class="lightbox-btn exit-btn" id="exit-image"><i class="fas fa-times"></i></button>
+          <img src="" alt="imagem">
+          <div class="lightbox-arrows">
+            <button class="lightbox-btn previous-btn" id="previous-image"><i
+                class="fa-solid fa-chevron-left"></i></button>
+            <button class="lightbox-btn next-btn" id="next-image"><i class="fa-solid fa-chevron-right"></i></button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container"></div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.6/underscore-min.js"
+    integrity="sha512-2V49R8ndaagCOnwmj8QnbT1Gz/rie17UouD9Re5WxbzRVUGoftCu5IuqqtAM9+UC3fwfHCSJR1hkzNQh/2wdtg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="main.js"></script>
+  <script src="gallery.js"></script>
+
+</body>
+
+</html>

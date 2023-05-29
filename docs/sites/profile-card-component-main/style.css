@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+    --primary-blue-400: hsl(185, 75%, 39%);
+    --primary-blue-900: hsl(229, 23%, 23%);
+    --primary-blue-600: hsl(227, 10%, 46%);
+    --neutral-grey-200: hsl(0, 0%, 35%);
+
+    --fw-normal: 400;
+    --fw-bold: 700;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-blue-400);
+}
+
+.container {
+    max-width: 330px;
+    background-color: white;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.img__top img {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+}
+
+.profile__hero img {
+    display: block;
+    overflow: hidden;
+    width: 95px;
+    outline: 5px solid white;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.profile__hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile__info {
+    transform: translateY(-50%);
+}
+
+.profile__name__age {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile__name__age h3 {
+    margin-right: 10px;
+    font-size: 17px;
+    font-weight: var(--fw-bold);
+}
+
+.profile__name__age p {
+    color: var(--neutral-grey-200);
+    justify-self: baseline;
+    font-weight: var(--fw-normal);
+}
+
+.profile__location {
+    display: flex;
+    font-weight: var(--fw-normal);
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    font-size: 13px;
+    color: var(--neutral-grey-200);
+}
+
+.profile__stats {
+    display: flex;
+    padding: 20px;
+    justify-content: space-around;
+    border-top: .5px solid hsla(0, 0%, 59%, 0.3);
+}
+
+.stats__followers h4, .stats__likes h4, .stats__photos h4 {
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.stats__followers p, .stats__likes p, .stats__photos p {
+    font-size: 8px;
+    font-weight: var(--fw-normal);
+    text-align: center;
+    color: var(--neutral-grey-200);
+    margin-top: 3px;
+    letter-spacing: 1.3px;
+}

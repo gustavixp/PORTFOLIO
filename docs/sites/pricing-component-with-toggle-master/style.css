@@ -1,0 +1,295 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+:root {
+  --primary-gradient: linear-gradient(
+    to right,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+
+  --neutral-blue-100: hsl(240, 78%, 98%);
+  --neutral-blue-200: hsl(234, 14%, 74%);
+  --neutral-blue-400: hsl(233, 13%, 49%);
+  --neutral-blue-700: hsl(232, 13%, 33%);
+
+  --fw-normal: 700;
+  --fz-normal: 15px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  background: url(images/bg-top.svg) no-repeat right top,
+    url(images/bg-bottom.svg) no-repeat left bottom;
+}
+
+.wrapper {
+  display: grid;
+  place-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+/* =-                 H E A D E R                 -= */
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 30px auto 50px;
+}
+
+.header h1 {
+  color: var(--neutral-blue-700);
+  margin-bottom: 30px;
+}
+
+.pricing {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pricing p {
+  color: var(--neutral-blue-400);
+  font-size: 12px;
+}
+
+input[type="checkbox"] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 50px;
+  height: 25px;
+  margin-inline: 20px;
+  background: var(--primary-gradient);
+  display: block;
+  border-radius: 100px;
+  position: relative;
+}
+
+label:after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 5px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+input:hover + label {
+  background: var(--neutral-blue-700);
+}
+
+input:checked + label {
+  background: var(--primary-gradient);
+}
+
+input:checked + label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+  background: white;
+}
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+/* =-                  C A R D S                  -= */
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+
+.cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 300px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.card h3 {
+  color: var(--neutral-blue-700);
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.card p {
+  color: var(--neutral-blue-700);
+}
+
+.card.pro {
+  padding: 40px 20px;
+  background: hsl(237, 63%, 68%);
+  box-shadow: 0 5px 19px -8px rgba(0, 0, 0, 0.75);
+}
+
+.card.pro p {
+  color: #fff;
+}
+
+.card.pro h3 {
+  color: #fff;
+}
+
+.card.basic {
+  box-shadow: 0 5px 19px -10px rgba(0, 0, 0, 0.75);
+}
+
+.card.master {
+  box-shadow: 0 5px 19px -8px rgba(0, 0, 0, 0.75);
+}
+
+/* PRICE */
+
+.card .price {
+  color: hsl(232, 13%, 25%);
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.price span {
+  display: inline-flex;
+  font-size: 30px;
+  margin-right: 5px;
+  transform: translateY(-6px);
+}
+
+.price.monthly {
+  display: none;
+}
+
+.cards.active .card .price__container .price.monthly {
+  display: block;
+}
+
+.cards.active .card .price__container .price.annually {
+  display: none;
+}
+
+.specs {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border-top: 1px solid hsl(232, 13%, 80%);
+}
+
+.specs:nth-of-type(4) {
+  border-bottom: 1px solid hsl(232, 13%, 80%);
+  margin-bottom: 20px;
+}
+
+.specs p {
+  font-size: 14px;
+  margin: 15px 0;
+}
+
+/* Buttons */
+
+.btn {
+  display: inline-flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-gradient);
+  width: 100%;
+  padding: 12px 20px;
+  border-radius: 5px;
+  border: none;
+  text-decoration: none;
+  color: white;
+  font-size: 11px;
+  font-weight: var(--fw-normal);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  background: transparent;
+  color: hsl(237, 63%, 68%);
+  outline: 1px solid hsl(237, 63%, 68%);
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.btn.pro {
+  background: white;
+  color: hsl(237, 63%, 68%);
+}
+
+.btn.pro:hover {
+  background: hsl(237, 63%, 68%);
+  color: white;
+  outline: 1px solid white;
+}
+
+@media screen and (max-width: 850px) {
+  body {
+    background: url(images/bg-top.svg) no-repeat right top;
+  }
+
+  .cards {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .card.pro {
+    padding: 20px;
+  }
+}
