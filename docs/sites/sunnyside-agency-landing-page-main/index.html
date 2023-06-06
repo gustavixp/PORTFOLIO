@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <script src="https://kit.fontawesome.com/52e9ba2d77.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Sunnyside agency landing page</title>
+</head>
+<body>
+
+  <div class="wrapper">
+    <div class="content">
+
+      <header class="header">
+        <div class="header__wrapper">
+          <img src="images/logo.svg" alt="logo" class="header__logo">
+          <nav class="nav">
+            <div class="triangle"></div>
+            <a>About</a>
+            <a>Services</a>
+            <a>Projects</a>
+            <a class="contact">Contact</a>
+          </nav>
+          <a class="hamb-a"><img class="hamb" src="images/icon-hamburger.svg" alt=""></a>
+        </div>
+      </header>
+
+      <main>
+
+        <section class="hero">
+          <div class="hero__wrapper">
+            <h1>We are creatives</h1>
+          </div>
+        </section>
+
+        <section class="transform">
+          <div class="transform__wrapper">
+            <div class="transform__text">
+              <h2>Transform your brand</h2>
+              <p>
+                We are a full-service creative agency specializing in helping brands grow fast.
+                Engage your clients through compelling visuals that do most of the marketing for you.
+              </p>
+            <a class="learn-more transform">Learn More</a>
+            </div>
+            <div class="transform__image">
+              <picture>
+                <source srcset="images/desktop/image-transform.jpg" media="(min-width: 830px)">
+                <img src="images/mobile/image-transform.jpg" alt="sunnyside" class="transform__arrow">
+              </picture>
+            </div>
+          </div>
+        </section>
+
+        <section class="stand-out">
+          <div class="stand-out__wrapper">
+            <div class="stand-out__image">
+              <picture>
+                <source srcset="images/desktop/image-stand-out.jpg" media="(min-width: 830px)">
+                <img src="images/mobile/image-stand-out.jpg" alt="sunnyside" class="stand-out__arrow">
+              </picture>
+            </div>
+            <div class="stand-out__text">
+              <h2>Stand out to the right audience</h2>
+              <p>
+                Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we'll build and extend your brand in digital places.
+              </p>
+              <a class="learn-more stand-out">Learn More</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="graphic-photo">
+          <div class="graphic-photo__wrapper">
+            <div class="graphic">
+              <h3>Graphic design</h3>
+              <p>Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients' attention.</p>
+            </div>
+            <div class="photo">
+              <h3>Photography</h3>
+              <p>Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="testi">
+          <div class="testi__wrapper">
+            <h4>Client testimonials</h4>
+            <div class="testi-card__wrapper">
+              <div class="testi-card">
+                <img src="images/image-emily.jpg" alt="">
+                <p class="description">
+                  We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.
+                </p>
+                <div class="card__footer">
+                  <h5>Emily R.</h5>
+                  <p>Marketing Director</p>
+                </div>
+              </div>
+              <div class="testi-card">
+                <img src="images/image-thomas.jpg" alt="">
+                <p class="description">
+                  Sunnyside's enthusiasm coupled with their keen interest in our brand's success made it a satisfying and enjoyable experience.
+                </p>
+                <div class="card__footer">
+                  <h5>Thomas S.</h5>
+                  <p>Chief Operating Officer</p>
+                </div>
+              </div>
+              <div class="testi-card">
+                <img src="images/image-jennie.jpg" alt="">
+                <p class="description">
+                  Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!
+                </p>
+                <div class="card__footer">
+                  <h5>Jennie F.</h5>
+                  <p>Business Owner</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="gallery">
+          <div class="gallery__wrapper">
+            <picture>
+              <source srcset="images/desktop/image-gallery-milkbottles.jpg" media="(min-width: 830px)">
+              <img src="images/mobile/image-gallery-milkbottles.jpg" class="gallery__img">
+            </picture>
+            <picture>
+              <source srcset="images/desktop/image-gallery-orange.jpg" media="(min-width: 830px)">
+              <img src="images/mobile/image-gallery-orange.jpg" class="gallery__img">
+            </picture>
+            <picture>
+              <source srcset="images/desktop/image-gallery-cone.jpg" media="(min-width: 830px)">
+              <img src="images/mobile/image-gallery-cone.jpg" class="gallery__img">
+            </picture>
+            <picture>
+              <source srcset="images/desktop/image-gallery-sugarcubes.jpg" media="(min-width: 830px)">
+              <img src="images/mobile/image-gallery-sugar-cubes.jpg" class="gallery__img">
+            </picture>
+          </div>
+        </section>
+
+      </main>
+
+      <footer class="footer">
+        <div class="footer__wrapper">
+          <img class="logo__footer" src="images/logo-footer.svg" alt="">
+          <div class="nav__footer">
+            <a>About</a>
+            <a>Services</a>
+            <a>Projects</a>
+          </div>
+          <div class="socials__footer">
+            <a><i class="fab fa-facebook"></i></a>
+            <a><i class="fab fa-instagram"></i></a>
+            <a><i class="fab fa-twitter"></i></a>
+            <a><i class="fab fa-pinterest"></i></a>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
